@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-ivory: #FAF7F2;
+    --color-ivory-warm: #F3ECE2;
+    --color-burgundy: #5B1E31;
+    --color-burgundy-deep: #431422;
+    --color-burgundy-soft: #85374E;
+    --color-olive: #5D6B4F;
+    --color-olive-deep: #3E4A32;
+    --color-olive-soft: #8A9977;
+    --color-champagne: #CDB38B;
+    --color-champagne-light: #E7DBCA;
+    --color-gold: #C5A059;
+    --color-ink: #2B2A27;
+    --color-ink-muted: #6B6862;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-ink);
+    font-family: "Jost", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: "kern", "liga";
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  }
+
+  .font-script {
+    font-family: "Alex Brush", cursive;
+  }
+
+  .font-sans {
+    font-family: "Jost", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+/* Luxury Editorial Styling Utilities */
+.eyebrow {
+  font-family: "Jost", sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.hairline {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(205, 179, 139, 0.4) 20%,
+    rgba(205, 179, 139, 0.9) 50%,
+    rgba(205, 179, 139, 0.4) 80%,
+    transparent
+  );
+}
+
+.paper-texture {
+  position: relative;
+}
+
+.paper-texture::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #CDB38B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5B1E31;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.04); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}

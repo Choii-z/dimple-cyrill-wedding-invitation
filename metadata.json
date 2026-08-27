@@ -1,0 +1,6 @@
+{
+  "name": "Angelika & Cyrill Wedding",
+  "description": "The official wedding celebration website for Angelika Dimple Alcantara and Cyrill John Forte at Jade Resort, Bauang, La Union.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
